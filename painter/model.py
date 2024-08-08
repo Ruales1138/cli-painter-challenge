@@ -1,10 +1,14 @@
 # TODO: Add code here
 import matplotlib.pyplot as plt
 from math import pi
+
+
 class Point:
     def __init__(self, x: float, y: float):
-        self.x = x
-        self.y = y
+        self.x: float = x
+        self.y: float = y
+
+
 class Circle:
     def __init__(self, center: Point, radius: float):
         self.center = center
