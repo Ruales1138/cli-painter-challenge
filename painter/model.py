@@ -11,8 +11,8 @@ class Point:
 
 class Circle:
     def __init__(self, center: Point, radius: float):
-        self.center = center
-        self.radius = radius
+        self.center: Point = center
+        self.radius: float = radius
 
     def area(self) -> float:
         return pi * (self.radius ** 2)
@@ -22,3 +22,6 @@ class Circle:
         plt.gca().add_patch(circle)
         plt.axis("scaled")
         plt.show()
+
+    def __str__(self) -> str:
+        return f"Circle with center at ({self.center.x}, {self.center.y}) and radius {self.radius}"
